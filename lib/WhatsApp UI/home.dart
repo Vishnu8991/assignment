@@ -8,8 +8,6 @@ void main(){
 
 class WhatsApp extends StatelessWidget{
 
-  var name = ["John Wick", "Arya Stark", "Edward", "Mike", "Snowman", "Mia", "Rhea", "Christina", "Abraham", "Parker"];
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
