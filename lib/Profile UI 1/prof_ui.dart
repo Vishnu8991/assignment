@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main(){
@@ -7,6 +6,10 @@ void main(){
 }
 
 class prof extends StatelessWidget{
+
+  var ic = [Icons.privacy_tip_outlined,Icons.history,Icons.help,Icons.settings,Icons.person_add_alt_1,Icons.logout];
+  var label = ["Privacy","Purchase History","Help & Support","Settings","Invite a Friend","Logout"];
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -34,24 +37,10 @@ class prof extends StatelessWidget{
           children: [
             SizedBox(height: 30,),
             Container(  
-              height: 130,
-              width: 130,
+              height: 140,
+              width: 140,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.blue.shade50,
-                    blurRadius: 15,
-                    spreadRadius: 1,
-                    offset: Offset(4, 4)
-                  ),
-                  BoxShadow(
-                    color: Colors.blue.shade50,
-                    blurRadius: 15,
-                    spreadRadius: 1,
-                    offset: Offset(-4, -4)
-                  ),
-                ],
                 image: DecorationImage(image: AssetImage("image/kim.jpg"),fit: BoxFit.cover)),
             ),
             SizedBox(height: 40,),
@@ -60,25 +49,51 @@ class prof extends StatelessWidget{
               style: GoogleFonts.heebo(textStyle: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),)),
               SizedBox(height: 2,),
               Text("@wexre11",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black87),),
+              SizedBox(height: 20,),
+              Text("Android Developer at Google",style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.grey[600])),
 
 
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.all(25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("walter.png",height: 5,),
-                      Image.asset("twitter.png",height: 10,),
-                      Image.asset("facebook.png",height: 10,),
-                      Image.asset("linkedin.png",height: 5,),
+                      Image.asset("image/google.png",height: 36,),
+                      SizedBox(width: 20,),
+                      Image.asset("image/facebook.png",height: 36,),
+                      SizedBox(width: 20,),
+                      Image.asset("image/twitter.png",height: 36,),
+                      SizedBox(width: 20,),
+                      Image.asset("image/linkedin.png",height: 36,),
                     ],
                   ),
                 ),
-              )
+              ),
+              SizedBox(height: 30,),
 
+            Expanded(child: ListView.builder(itemBuilder: (context, index){
+              return
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 15),
+                child: Card(color: Colors.grey[800],
+                  child: Container(
+                    decoration: BoxDecoration(color: const Color.fromARGB(255, 85, 84, 84),
+                    borderRadius: BorderRadius.circular(22)),
+                    child: ListTile(
+                      title: Text(label[index],style: TextStyle(fontSize: 17, color: Colors.white),),
+                      leading: Icon(ic[index],color: Colors.white,),
+                      trailing: Icon(Icons.arrow_forward_ios, color: Colors.white,),
+                    ),
+                  ),
+                ),
+              );
+            },itemCount: 6,
+            )
+            )
           ],
         ),
+        
       ),
     );
   }
