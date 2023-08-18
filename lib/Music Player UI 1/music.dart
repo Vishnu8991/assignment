@@ -63,7 +63,7 @@ class _PlayerState extends State<Player> {
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.grey[800]
+                      color: Colors.grey[900]
                       // color: Colors.grey
                     ),
                   ),
