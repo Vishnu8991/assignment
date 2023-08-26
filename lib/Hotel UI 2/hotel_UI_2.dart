@@ -13,8 +13,6 @@ class Hotel2 extends StatefulWidget {
 
 class _Hotel2State extends State<Hotel2> {
 
-  var index = 0;
-
   var colors = [const Color.fromARGB(255, 30, 143, 236),Colors.pink,Colors.green];
   var icon = [Icons.hotel,Icons.restaurant,Icons.local_cafe_rounded];
   var name = ["Hotel","Restaurant","Cafe"];
