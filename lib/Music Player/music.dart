@@ -21,7 +21,7 @@ class _PlayerState extends State<Player> {
     "https://diak46rl5chc7.cloudfront.net/orgs/123563/contents/it1q43t6bfssaijm/it1q43t6bfssaijm.jpg",
     "https://i.scdn.co/image/ab67706c0000da84b49421035c9525ff74eb37c5",
     "https://i.scdn.co/image/ab67706c0000da84cc2ad156c70f5a9ed2b3e8f0",
-    "https://i.scdn.co/image/ab67706c0000da84ca926536b4ad63d7b8820f98",
+    "https://i.scdn.co/image/ab67706f0000000234611790d77ad189576ffef3",
     "https://i.scdn.co/image/ab67706c0000da849f3cbfb3fa1dc99e8eae92a6",
     "https://i.scdn.co/image/ab67706c0000da843ee5953ef7cc1861e6f805ac",
     "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/65/30/a8/6530a807-45b0-8e41-8c80-57ef73b13ba7/0617465885754.png/1200x630bb.jpg",
@@ -47,7 +47,6 @@ class _PlayerState extends State<Player> {
                 title: Padding(
                   padding: const EdgeInsets.only(top: 11, left: 8, bottom: 8, right: 8),
                   child: Container(
-                    // color: Colors.grey,
                     height: 50,
                     width: double.infinity,
                     child: Padding(
@@ -64,7 +63,6 @@ class _PlayerState extends State<Player> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.grey[900]
-                      // color: Colors.grey
                     ),
                   ),
                   
@@ -77,8 +75,6 @@ class _PlayerState extends State<Player> {
               return Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
-                  // height: 50,
-                  // width: 50,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.network(img[index],fit: BoxFit.fitHeight)),
